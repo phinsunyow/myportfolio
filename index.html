@@ -8,7 +8,7 @@
     <!-- Open Graph meta tags for image and other properties -->
     <meta property="og:title" content="Phil Suño's Portfolio">
     <meta property="og:description" content="A passionate BSIS student with a lot of experience in Computer Systems.">
-    <meta property="og:image" content="https://phinsunyow.github.io/myportfolio/images/ME.jpg"> <!-- Adjust this URL based on your GitHub Pages setup -->
+    <meta property="og:image" content="https://your-github-username.github.io/your-repository-name/images/ME.jpg"> <!-- Adjust this URL based on your GitHub Pages setup -->
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     
@@ -27,18 +27,19 @@
         .neon-border {
             position: relative;
             display: inline-block;
+            overflow: hidden;
         }
 
         .neon-border::before {
             content: '';
             position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             z-index: -1;
             border: 2px solid transparent;
-            border-radius: 10px;
+            border-radius: 50%;
             background-image: linear-gradient(45deg, #00ff00, #00ff80, #00ff00);
             background-size: 400% 400%;
             animation: neon-border-animation 3s linear infinite;
@@ -61,14 +62,11 @@
     <div class="container mx-auto">
         <h1 class="text-4xl font-bold mb-4">Hello, I'm Phil Patrick F. Suño</h1>
         <p class="text-lg">A passionate BSIS student with a lot of experience in Computer Systems.</p>
-        <div class="flex justify-center items-center mt-8">
+        <div class="flex justify-center items-center mt-8 neon-border">
             <img src="images/ME.jpg" alt="Your Name" class="rounded-full h-64 w-64 object-cover object-center">
         </div>
     </div>
 </header>
-
-
-
 
 <!-- About Section -->
 <section id="about" class="py-16">
