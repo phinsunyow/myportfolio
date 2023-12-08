@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phil Suño Portfolio</title>
-
-     <!-- Open Graph meta tags for image and other properties -->
+    <title>Phil Suño's Portfolio</title>
+    
+    <!-- Open Graph meta tags for image and other properties -->
     <meta property="og:title" content="Phil Suño's Portfolio">
     <meta property="og:description" content="A passionate BSIS student with a lot of experience in Computer Systems.">
-    <meta property="og:image" content="https://your-github-username.github.io/your-repository-name/images/ME.jpg"> <!-- Adjust this URL based on your GitHub Pages setup -->
-
+    <meta property="og:image" content="https://phinsunyow.github.io/myportfolio//images/ME.jpg"> <!-- Adjust this URL based on your GitHub Pages setup -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    
     <style>
         /* Set the font family for various elements to Hanken Grotesk */
         body, h1, h2, h3, h4, h5, h6, p, a, span, div, input, textarea, button {
@@ -21,23 +22,39 @@
         code {
             font-family: 'Courier New', monospace;
         }
+
+        /* Neon spinning border animation */
+        .neon-border {
+            position: relative;
+            display: inline-block;
+        }
+
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -1;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            background-image: linear-gradient(45deg, #00ff00, #00ff80, #00ff00);
+            background-size: 400% 400%;
+            animation: neon-border-animation 3s linear infinite;
+        }
+
+        @keyframes neon-border-animation {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
     </style>
 </head>
 <body class="bg-green-100 text-green-800">
-    <!-- Navigation -->
-    <nav class="bg-green-700 text-white p-4">
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold">Welcome</div>
-                <div class="flex space-x-4">
-                    <a href="#about" class="hover:text-white">About</a>
-                    <a href="#skills" class="hover:text-white">Skills</a>
-                    <a href="#projects" class="hover:text-white">Projects</a>
-                    <a href="#contact" class="hover:text-white">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
 
 <!-- Hero Section -->
 <header class="bg-green-500 text-white text-center py-20 relative">
